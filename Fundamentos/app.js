@@ -1,15 +1,14 @@
 //  //string
-//  let nombre="eugenio"
-//  let apellido="Gonzalez"
-//  let frase="  Bienvenido a la clase "
+  let nombre="eugenio"
+  let apellido="Gonzalez"
+  let frase="  Bienvenido a la clase "
 
 //  //concatenar
-//  console.log("nombre, apellido")
-//  console.log(nombre + " " + apellido)
-//  //template sting
-//  console.log(`Mi nombre es ${nombre} ${apellido}`
+  console.log(nombre,apellido)
+  console.log(nombre + " " + apellido)
+// //template sting
+ console.log(`Mi nombre es ${nombre} ${apellido}`)
 
-//  )
 //  //metodos de los string
 //  console.log(nombre.toUpperCase())//MAYUSCULA
 //  console.log(nombre.toLowerCase())//minuscula
@@ -192,28 +191,122 @@
 
 //----------------------------
 
- let respuesta="HELSINKI"
- let acierto =false
- let contador=0
+//  let respuesta="HELSINKI"
+//  let acierto =false
+//  let contador=0
 
- while(contador<3 && acierto === false ){
+//  while(contador<3 && acierto === false ){
           
-          let respUsuario = prompt("capital de filandia")
+//           let respUsuario = prompt("capital de filandia")
 
-           if (respUsuario.toUpperCase()=== respuesta ) {
-                  document.write("Muy bien! ACERTASTE")
-                  acierto=true
-            }
+//            if (respUsuario.toUpperCase()=== respuesta ) {
+//                   document.write("Muy bien! ACERTASTE")
+//                   acierto=true
+//             }
             
-            contador++
- }
- if(acierto===false){
-       document.write("lo sentimos no la pegaste LOSER!")
- }
+//             contador++
+//  }
+//  if(acierto===false){
+//        document.write("lo sentimos no la pegaste LOSER!")
+//  }
 
+//Bucle:FOR
+//estructura
+// for(let i = 0;i<10;i++){
+//       //acciones
+//       console.log(i)
+// }
+//Tarea
+//Ingresar la tabla que queremos calcular
+//mostrar por consola la tabla
 
+// let tabla=parseInt(prompt("Ingrese el numero de la tabla a calcular"))
+// if(isNaN(tabla)){
+//       console.error("Debe enviar un numero")
+// }else {
 
+// while(tabla!==NaN){
+//       for(let i=1;i<=10;i++){
+//             console.log(`${tabla} X ${i}=${tabla*i}`)
+//       }
+//       let tabla=parseInt(prompt("Ingrese el numero de la tabla a calcular"))
+//  }
 
+//  let tabla = prompt('Ingrese el numero de la tabla que desea calcular');
+//ricardo
+// let tabla=parseInt(prompt("Ingrese el numero de la tabla a calcular"))
+//  if (tabla!==null){
+ 
+//      tabla = parseInt(tabla);
+ 
+//      while (isNaN(tabla)){
+//          console.error('Debe ingresar un número.');
+//          tabla = parseInt(prompt('Ingrese el número de la tabla que desea calcular'));
+//      }
+ 
+//      for(let i=1;i<=10;i++){
+//          console.log(`${tabla} x ${i} = ${tabla * i}`);
+//      } 
+//  }
+//FABRI : Donde el usuario va ingresar un NaNan o apretar cancelar y va parar la funcion de while//con While(tabla )
+//  let tabla = parseInt(prompt("numero"));
+// while (tabla) {
+//   for (let i = 1; i <=10; i++) {
+//     console.log(`${tabla} x ${i} = ${tabla * i}`);
+//   }
+//   tabla = parseInt(prompt("numero"));
+// }
+//Array o arreglos
+//listas
+//mutacion de un arreglo
+//metodos
+//  let alumnos=["pablo", "Fabri","laura", "norali","walter"]
+// //acceder a un elemento dentro del arreglo
+// // alumnos[2]
+// //Para obtener el ultimo elemento 
+//   alumnos[alumnos.length -1]
+// //Concatenar todos los elementos en un string
+//        alumnos.join()
+// //Iterar o recorrer un arreglo 
+//       for (let i=0; i<alumnos.length;i++) {
+//             console.log(alumnos[i]);
+            
+//       }
+// //Agregar elementos al final del arreglo
+// alumnos.push("jorge")
+// //Eliminar el ultimo elemento
+// alumnos.pop()
+// //añadir un elemento al priincipio
+// alumnos.unshift("walter")
+// //eliminar un elemento del principio
+// alumnos.shift()
+// //Encontra el indice de un letra o porcion de palabra(posicion) de acuerdo a lo q el usuario ingresa si el elemento existe me va a mostra la posicion del mismo y no existe me devuelve siempre un -1 una forma de saber que no esta
+// console.log(alumnos.indexOf("fabri"))
+// //otra forma de saber si el elemento esta en el arreglo 
+// console.log(alumnos.includes("pepa"))
+//eliminar un elemento mediante suposicion ,tenemos que saber la posicion
+// let pos=1
+// alumnos.splice(pos,1)
+ /*borra todo con splicer seria lo mismo que inicializar un arreglo sin ningun elemento
+ alumnos.splice(0)
+alumnos=[]*/
+//Eliminar varios elementos a partir de una posicion
+ //let alumnosEliminados= alumnos.splice(0,3)
 
-
-
+ //Remplazar valores hay que tener cuidado porque la cantidad de elementos que elimino tiene que ser igual a la cantidad de elementos que le estoy pasando, sino pierdo elementos..y si le paso mas elementos de la cantidad de elementos a modificar ..seria que estoy asignando esos nuevos valores al array 
+ //caso1 alumnos.splice(0,2,"Daniel","Juan")
+ //caso2 alumnos.splice(0,2,"Daniel",)
+ //caso3 alumnos.splice(0,2,"Daniel","Juan","julian")
+ //Hay que tener cuenta porque puedo mandar elementos repetidos
+ //concatenar dos array este metodo me crea un nuevo arreglo no esq me modifica
+   // let comision=alumnas.concat(alumnos)
+   //tambien se puede concatenar mas de dos arrays
+  // let school=alumnos.concat(mentores,comision,alumnos)
+  //Invierte el orden
+// School.sort()  //ordena por orden alfabetico
+  //let schoolAZ=School.sort()
+  // schoolAZ.reverse() de schoolAZ me lo invierte aasi como estaprevianmete ordenado de az
+  //no funciona con numeros(con funciones) solo con string
+  //let respuesta=["🥚", "🐔"]
+  //Extrae una porcion del array sobre ek que se llama y devuelve un nuevo array
+  //let alumnosEspeciales=alumnos.slice(1,3)//posicion inicial y posicion final 

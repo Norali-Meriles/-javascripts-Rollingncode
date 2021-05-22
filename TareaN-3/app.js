@@ -51,9 +51,15 @@ else if(operacion!= null){
                   console.log(`La multiplicacion es :${multi}`)
                   break;
                   case"/":
-                  let division=primerValor /segundoValor
-                  console.log(`La division es :${division}`)
-                  break;
+                    if(segundoValor!=0){
+                        let division=primerValor /segundoValor
+                        console.log(`La division es :${division}`)
+                        break;
+                    }
+                  else{
+                        console.log("Divison indefinida")
+                  }   
+                         break;
       
             default:
                   console.error("No ingreso una operacion")
