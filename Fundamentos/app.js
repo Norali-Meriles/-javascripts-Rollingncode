@@ -287,7 +287,7 @@
 //eliminar un elemento mediante suposicion ,tenemos que saber la posicion
 // let pos=1
 // alumnos.splice(pos,1)
- /*borra todo con splicer seria lo mismo que inicializar un arreglo sin ningun elemento
+ /*borra todo con splice seria lo mismo que inicializar un arreglo sin ningun elemento
  alumnos.splice(0)
 alumnos=[]*/
 //Eliminar varios elementos a partir de una posicion
