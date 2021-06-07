@@ -13,8 +13,7 @@ Las funciones serán:
 -huecosLibres():indica cuantos contactos mas podemos ingresar
 Usar localStorage para guardar la info de la agenda y para consultar sus datos*/
 
-let agenda = JSON.parse(localStorage.getItem("contactos")) || [];
-let memoria=0
+let agenda = JSON.parse(localStorage.getItem("contactos")) || []
 class Contacto {
        constructor(nombre,telefono){
              this.nombre=nombre
@@ -27,24 +26,23 @@ function agregarContacto(nombre,telefono){
       if(agenda==[]){
             agenda.push(new Contacto (nombre,telefono))
             localStorage.setItem("contactos",JSON.stringify(agenda))
-            memoria++   
+              
       }
       else  if(agenda.length<=9){
             let band=false
-            let valor=nombre
                for(let i in agenda){
-                     if(agenda[i].nombre=== valor){
+                     if(agenda[i].nombre=== nombre){
                        band=true 
                      }
                }
             if(band){
-                  console.warn("Ya existe ese contacto en su agenda")
+                  console.warn("Ya existe un contacto en su agenda con el mismo nombre")
                  
             }
             else{
                   agenda.push(new Contacto (nombre,telefono))
                   localStorage.setItem("contactos",JSON.stringify(agenda))
-                  memoria++  
+                  
                }
                
             
@@ -55,15 +53,20 @@ function agregarContacto(nombre,telefono){
       
 }
 function listarContacto(){
-  // let agenda=  agenda.sort(JSON.parse(localStorage.getItem("contactos")))
     agenda.sort(agenda.nombre)
+    if(agenda.length>0){
       console.log("--------AGENDA TELEFONICA 📞-------")
-       agenda.forEach(function (contacto) {
-              console.log(`${contacto.nombre}`)
-              console.log(`${contacto.telefono}`)
-              console.log("-------------------------------------")
-             
-       });
+      agenda.forEach(function (contacto) {
+             console.log(`${contacto.nombre}`)
+             console.log(`${contacto.telefono}`)
+             console.log("-------------------------------------")
+            
+      });
+    }
+    else{
+          console.warn("No hay contactos en su agenda")
+    }
+      
 }
 function existeContacto(nombre){
          let valor =agenda.find(function(contact){
@@ -119,3 +122,4 @@ function huecosDisponible(){
      }
     
 }
+
